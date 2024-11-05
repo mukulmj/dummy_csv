@@ -47,7 +47,7 @@ This file contains data related to Continuous Integration (CI) configuration. Th
 - `dockerfile`: The Dockerfile used for building the service.
 - `context`: The context directory for Docker.
 - `environment_master`: The master environment.
-- `registry_name`: The registry used for deployment.
+- `registry_name`: The registry used for build.
 
 **Sample:**
 
