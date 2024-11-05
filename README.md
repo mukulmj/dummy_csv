@@ -47,12 +47,13 @@ This file contains data related to Continuous Integration (CI) configuration. Th
 - `dockerfile`: The Dockerfile used for building the service.
 - `context`: The context directory for Docker.
 - `environment_master`: The master environment.
+- `registry_name`: The registry used for deployment.
 
 **Sample:**
 
 ```
-application,service,application_env,repo_id,repo_branch,job_template,dockerfile,context,environment_master
-app-name1,test-dummy,uat-test,TestDummy,master,app-name1-v2,Dockerfile,.,uat
+application,service,application_env,repo_id,repo_branch,job_template,dockerfile,context,environment_master,registry_name
+app-name1,test-dummy,uat-test,TestDummy,master,app-name1-v2,Dockerfile,.,uat,bp
 ```
 
 **3. serviceCD.csv**
@@ -77,10 +78,11 @@ This file contains data related to Continuous Deployment (CD) configuration. The
 - `readiness_timeout_seconds`: The timeout for the readiness probe.
 - `readinesss_failure_threshold`: The failure threshold for the readiness probe.
 - `job_template`: The job template used for deployment.
+- `registry_name`: The registry used for deployment.
 
 **Sample:**
 
 ```
-application,service,application_env,desired_replication,requests_memory_quota,requests_cpu_quota,limits_cpu_quota,limits_memory_quota,environment_master,target_port,app_port,readiness_probe_path,readiness_probe_port,readiness_initial_delay_seconds,readiness_period_seconds,readiness_timeout_seconds,readinesss_failure_threshold,job_template
-app-name1,test-dummy,dev-test,1,1000,500,2000,1000,dev,8093,9080,'/test/healthCheck',8093,30,5,10,5,app-name1-v2
+application,service,application_env,desired_replication,requests_memory_quota,requests_cpu_quota,limits_cpu_quota,limits_memory_quota,environment_master,target_port,app_port,readiness_probe_path,readiness_probe_port,readiness_initial_delay_seconds,readiness_period_seconds,readiness_timeout_seconds,readinesss_failure_threshold,job_template,registry_name
+app-name1,test-dummy,dev-test,1,1000,500,2000,1000,dev,8093,9080,'/test/healthCheck',8093,30,5,10,5,app-name1-v2,bp
 ```
